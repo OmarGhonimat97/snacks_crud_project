@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Create a Snack</h1>
+<!--<form action="{% url 'snack_create' %}" method="post">-->
+<!--<form action="" method="post">-->
+<form method="post">
+    {% csrf_token %}
+<!--    {{ form.name }}-->
+<!--    {{ form.purchaser }}-->
+<!--    {{ form.description }}-->
+    {{ form.as_p }}
+    <input type="submit" />
+</form>
+
+{% endblock content %}
